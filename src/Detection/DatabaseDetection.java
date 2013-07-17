@@ -4,6 +4,8 @@
  */
 package Detection;
 
+import MAD.MAD;
+import MAD.QueryExtraction;
 import Profiling.DatabaseProfile;
 import Profiling.Profile;
 import java.io.BufferedWriter;
@@ -55,7 +57,7 @@ public class DatabaseDetection extends Detection {
         boolean data = compareDataSize();
         boolean response = compareResponseTime();
         boolean time = compareTimeInterval();
-        boolean query = newCompareQueryPattern();
+        boolean query = newnewCompareQueryPattern();
 //        boolean dbcpu = compareDatabaseCPU();
 //        boolean dbmem = compareDatabaseMemory();
 //        boolean cpu = compareCPU();
@@ -640,18 +642,58 @@ public class DatabaseDetection extends Detection {
 
         Vector a = new Vector();
 
-        
+
         System.out.println(a);
 
         return a;
 
     }
 
-    public static void main(String[] str){
+    public static void main(String[] str) {
 
         String a = "select * from table where a = bbc";
 
-        
 
+
+    }
+
+    private boolean newnewCompareQueryPattern() {
+
+        boolean result = false;
+
+//        for (int i = 0; i < this.GeneralProfile.getQueryPatternList().size(); i++) {
+//            System.out.println(this.GeneralProfile.getQueryPatternList().get(i));
+//
+//        }
+//
+//        System.out.println("aaa");
+
+        MAD m = new MAD();
+
+
+        double medium = m.getMedian(GeneralProfile);
+//System.out.println("aaa");
+        double mad = m.generateMAD(GeneralProfile);
+
+        int counter = 0;
+//System.out.println("aaa");
+        for (int i = 0; i < SuspectProfile.getQueryPatternList().size(); i++) {
+
+            double value = MAD.convertUnity(QueryExtraction.extract(SuspectProfile.getQueryPatternList().get(i)));
+            
+
+            result = m.calculate(value, SuspectProfile, medium, mad);
+            if(result){
+                counter ++;
+            } else {
+                counter --;
+            }
+        }
+
+        if(counter >0){
+            result = true;
+        }
+
+        return result;
     }
 }

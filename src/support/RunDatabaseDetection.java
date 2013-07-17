@@ -61,11 +61,11 @@ public class RunDatabaseDetection {
 
                     gp.SetupProfile();
 
-//                end = covertDateToTimestamp("2013-04-17 20:44:27");
-//                begin = covertDateToTimestamp("2013-04-17 16:20:02");
-                    date = new java.util.Date();
-                    end = new Timestamp(date.getTime());
-                    begin = new Timestamp(end.getTime() - 5 * timeForMonitoring * 1000);
+                end = covertDateToTimestamp("2013-04-17 20:44:27");
+                begin = covertDateToTimestamp("2013-04-17 16:20:02");
+//                    date = new java.util.Date();
+  //                  end = new Timestamp(date.getTime());
+    //                begin = new Timestamp(end.getTime() - 5 * timeForMonitoring * 1000);
 
 
                     Profile sp = new DatabaseProfile(begin, end, dbuser);

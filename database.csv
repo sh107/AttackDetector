@@ -125,3 +125,17 @@
 2013-05-20 18:59:11.213, user1, false, false, true, false
 2013-05-22 15:22:18.875, user1, false, false, false, false
 2013-05-22 15:23:19.514, user1, false, false, false, false
+2013-07-16 14:24:39.804, user1, false, false, false, false, user2, false, false, false, false, user3, false, false, false, false
+2013-07-16 14:49:45.106, user1, false, false, false, true, user2, false, false, false, true, user3, false, false, false, true
+2013-07-16 15:10:42.448, user1, false, false, false, true, user2, false, false, false, true, user3, false, false, false, true
+2013-07-16 15:46:14.863, user1, false, false, false, true, user2, false, false, false, true, user3, false, false, false, true
+2013-07-16 16:47:26.784, user1, false, false, false, true, user2, false, false, false, true, user3, false, false, false, true
+2013-07-17 14:23:33.657, user1, false, false, false, false, user2, false, false, false, false, user3, false, false, false, false
+2013-07-17 15:02:53.066, user1, false, false, false, true, user2, false, false, false, true, user3, false, false, false, true
+2013-07-17 15:03:38.216, user1, false, false, false, true, user2, false, false, false, true, user3, false, false, false, true
+2013-07-17 15:03:59.544, user1, false, false, false, true, user2, false, false, false, true, user3, false, false, false, true
+2013-07-17 15:04:38.982, user1, false, false, false, true, user2, false, false, false, true, user3, false, false, false, true
+2013-07-17 15:05:39.4, user1, false, false, false, true, user2, false, false, false, true, user3, false, false, false, true
+2013-07-17 15:05:47.86, user1, false, false, false, false, user2, false, false, false, false, user3, false, false, false, true
+2013-07-17 15:06:39.669, user1, false, false, false, true, user2, false, false, false, true, user3, false, false, false, true
+2013-07-17 15:06:48.583, user1, false, false, false, false, user2, false, false, false, false, user3, false, false, false, true
